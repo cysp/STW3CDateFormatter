@@ -66,6 +66,19 @@ static NSUInteger const STW3CDateFormatterTestsCalendarUnits = NSCalendarUnitYea
 		STAssertEquals([outputDateComponents.timeZone secondsFromGMT], (NSInteger)0, @"");
 	}
 	{
+		NSString * const input = @"1997-07-16T00:00Z";
+		NSDate * const outputDate = [_formatter dateFromString:input];
+		NSDateComponents * const outputDateComponents = [_gregorian components:STW3CDateFormatterTestsCalendarUnits fromDate:outputDate];
+
+		STAssertEquals(outputDateComponents.year, (NSInteger)1997, @"");
+		STAssertEquals(outputDateComponents.month, (NSInteger)7, @"");
+		STAssertEquals(outputDateComponents.day, (NSInteger)16, @"");
+		STAssertEquals(outputDateComponents.hour, (NSInteger)0, @"");
+		STAssertEquals(outputDateComponents.minute, (NSInteger)0, @"");
+		STAssertEquals(outputDateComponents.second, (NSInteger)0, @"");
+		STAssertEquals([outputDateComponents.timeZone secondsFromGMT], (NSInteger)0, @"");
+	}
+	{
 		NSString * const input = @"1997-07-16T19:20+01:00";
 		NSDate * const outputDate = [_formatter dateFromString:input];
 		NSDateComponents * const outputDateComponents = [_gregorian components:STW3CDateFormatterTestsCalendarUnits fromDate:outputDate];

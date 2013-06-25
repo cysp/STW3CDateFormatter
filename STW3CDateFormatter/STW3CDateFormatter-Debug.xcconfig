@@ -1,0 +1,13 @@
+//  Copyright (c) 2013 Scott Talbot. All rights reserved.
+
+#include "STW3CDateFormatter.xcconfig"
+
+
+ONLY_ACTIVE_ARCH = NO
+COPY_PHASE_STRIP = NO
+VALIDATE_PRODUCT = NO
+GCC_OPTIMIZATION_LEVEL = 0
+
+GCC_PREPROCESSOR_DEFINITIONS = DEBUG=1 $(inherited)
+
+DEBUG_INFORMATION_FORMAT = dwarf

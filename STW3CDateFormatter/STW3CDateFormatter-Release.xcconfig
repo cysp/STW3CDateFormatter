@@ -1,0 +1,11 @@
+//  Copyright (c) 2013 Scott Talbot. All rights reserved.
+
+#include "STW3CDateFormatter.xcconfig"
+
+
+VALIDATE_PRODUCT = YES
+COPY_PHASE_STRIP = YES
+GCC_OPTIMIZATION_LEVEL = s
+ENABLE_NS_ASSERTIONS = NO
+
+DEBUG_INFORMATION_FORMAT = dwarf-with-dsym

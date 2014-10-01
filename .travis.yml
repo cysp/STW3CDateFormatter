@@ -13,4 +13,4 @@ branches:
     - master
 
 before_script:
-    - brew uninstall xctool && brew install xctool --HEAD
+    - brew update && brew upgrade xctool

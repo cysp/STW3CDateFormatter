@@ -62,7 +62,7 @@
 		2C8F1AC21779D1490038F32E /* STW3CDateFormatter-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "STW3CDateFormatter-Release.xcconfig"; sourceTree = "<group>"; };
 		2C8F1AC31779D1490038F32E /* STW3CDateFormatter.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = STW3CDateFormatter.xcconfig; sourceTree = "<group>"; };
 		2C8F1AC81779D1DD0038F32E /* libSTW3CDateFormatter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSTW3CDateFormatter.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.octest */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = STW3CDateFormatterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STW3CDateFormatterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8F1AF21779D5B60038F32E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
@@ -244,7 +244,7 @@
 		2C8F1A8D1779B7D20038F32E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0500;
+				LastUpgradeCheck = 0610;
 				ORGANIZATIONNAME = "Scott Talbot";
 			};
 			buildConfigurationList = 2C8F1A901779B7D20038F32E /* Build configuration list for PBXProject "STW3CDateFormatter" */;
@@ -516,6 +516,7 @@
 				2C8F1ABA1779B7D20038F32E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C8F1ABB1779B7D20038F32E /* Build configuration list for PBXNativeTarget "STW3CDateFormatterTests-iOS" */ = {
 			isa = XCConfigurationList;
@@ -525,6 +526,7 @@
 				2C8F1ABD1779B7D20038F32E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C8F1AE71779D1DE0038F32E /* Build configuration list for PBXNativeTarget "STW3CDateFormatter-mac" */ = {
 			isa = XCConfigurationList;
@@ -534,6 +536,7 @@
 				2C8F1AE91779D1DE0038F32E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2C8F1AEA1779D1DE0038F32E /* Build configuration list for PBXNativeTarget "STW3CDateFormatterTests-mac" */ = {
 			isa = XCConfigurationList;
@@ -543,6 +546,7 @@
 				2C8F1AEC1779D1DE0038F32E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

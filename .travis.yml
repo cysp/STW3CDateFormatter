@@ -11,3 +11,6 @@ matrix:
 branches:
   only:
     - master
+
+before_script:
+    - brew uninstall xctool && brew install xctool --HEAD

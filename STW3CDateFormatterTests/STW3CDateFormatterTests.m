@@ -169,4 +169,58 @@ static NSUInteger const STW3CDateFormatterTestsCalendarUnits = NSCalendarUnitYea
 	}
 }
 
+- (void)testStringingPerformanceNSDateFormatter {
+	NSDate * const input1 = [NSDate dateWithTimeIntervalSince1970:0];
+	NSDate * const input2 = [NSDate dateWithTimeIntervalSinceReferenceDate:0];
+
+	NSDateFormatter * const df = [[NSDateFormatter alloc] init];
+	df.dateFormat = @"yyyy-MM-dd'T'HH:mmZZZ";
+	df.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+
+	[self measureBlock:^{
+		for (int i = 0; i < 100000; ++i) {
+			(void)[df stringFromDate:input1];
+			(void)[df stringFromDate:input2];
+		}
+	}];
+}
+
+- (void)testStringingPerformanceSTW3CDateFormatter {
+	NSDate * const input1 = [NSDate dateWithTimeIntervalSince1970:0];
+	NSDate * const input2 = [NSDate dateWithTimeIntervalSinceReferenceDate:0];
+
+	STW3CDateFormatter * const formatter = [[STW3CDateFormatter alloc] init];
+
+	[self measureBlock:^{
+		for (int i = 0; i < 100000; ++i) {
+			(void)[formatter stringFromDate:input1];
+			(void)[formatter stringFromDate:input2];
+		}
+	}];
+}
+
+- (void)testParsingPerformanceNSDateFormatter {
+	NSDateFormatter * const df = [[NSDateFormatter alloc] init];
+	df.dateFormat = @"yyyy-MM-dd'T'HH:mmZZZ";
+	df.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+
+	[self measureBlock:^{
+		for (int i = 0; i < 10000; ++i) {
+			(void)[df dateFromString:@"1970-01-01T00:00Z"];
+			(void)[df dateFromString:@"2001-01-01T00:00Z"];
+		}
+	}];
+}
+
+- (void)testParsingPerformanceSTW3CDateFormatter {
+	STW3CDateFormatter * const formatter = [[STW3CDateFormatter alloc] init];
+
+	[self measureBlock:^{
+		for (int i = 0; i < 10000; ++i) {
+			(void)[formatter dateFromString:@"1970-01-01T00:00Z"];
+			(void)[formatter dateFromString:@"2001-01-01T00:00Z"];
+		}
+	}];
+}
+
 @end

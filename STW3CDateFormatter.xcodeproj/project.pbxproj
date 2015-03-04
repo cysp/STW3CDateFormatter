@@ -12,8 +12,6 @@
 		2C8F1AAD1779B7D20038F32E /* libSTW3CDateFormatter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F1A951779B7D20038F32E /* libSTW3CDateFormatter.a */; };
 		2C8F1AB51779B7D20038F32E /* STW3CDateFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F1AB41779B7D20038F32E /* STW3CDateFormatterTests.m */; };
 		2C8F1ADE1779D1DE0038F32E /* libSTW3CDateFormatter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F1AC81779D1DD0038F32E /* libSTW3CDateFormatter.a */; };
-		2C8F1AF31779D5B60038F32E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F1AF21779D5B60038F32E /* SenTestingKit.framework */; };
-		2C8F1AF41779D5B60038F32E /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F1AF21779D5B60038F32E /* SenTestingKit.framework */; };
 		2C8F1AF51779D6780038F32E /* STW3CDateFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F1AB41779B7D20038F32E /* STW3CDateFormatterTests.m */; };
 		2C8F1AF61779D6800038F32E /* STW3CDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F1A9F1779B7D20038F32E /* STW3CDateFormatter.m */; };
 /* End PBXBuildFile section */
@@ -62,8 +60,7 @@
 		2C8F1AC21779D1490038F32E /* STW3CDateFormatter-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "STW3CDateFormatter-Release.xcconfig"; sourceTree = "<group>"; };
 		2C8F1AC31779D1490038F32E /* STW3CDateFormatter.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = STW3CDateFormatter.xcconfig; sourceTree = "<group>"; };
 		2C8F1AC81779D1DD0038F32E /* libSTW3CDateFormatter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSTW3CDateFormatter.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STW3CDateFormatterTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C8F1AF21779D5B60038F32E /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator7.0.sdk/Developer/Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STW3CDateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,7 +76,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8F1AAD1779B7D20038F32E /* libSTW3CDateFormatter.a in Frameworks */,
-				2C8F1AF31779D5B60038F32E /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -95,7 +91,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8F1ADE1779D1DE0038F32E /* libSTW3CDateFormatter.a in Frameworks */,
-				2C8F1AF41779D5B60038F32E /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +102,6 @@
 			children = (
 				2C8F1A9A1779B7D20038F32E /* STW3CDateFormatter */,
 				2C8F1AAE1779B7D20038F32E /* STW3CDateFormatterTests */,
-				2C8F1A971779B7D20038F32E /* Frameworks */,
 				2C8F1A961779B7D20038F32E /* Products */,
 			);
 			sourceTree = "<group>";
@@ -118,17 +112,9 @@
 				2C8F1A951779B7D20038F32E /* libSTW3CDateFormatter.a */,
 				2C8F1AA51779B7D20038F32E /* STW3CDateFormatterTests.xctest */,
 				2C8F1AC81779D1DD0038F32E /* libSTW3CDateFormatter.a */,
-				2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.octest */,
+				2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		2C8F1A971779B7D20038F32E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				2C8F1AF21779D5B60038F32E /* SenTestingKit.framework */,
-			);
-			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		2C8F1A9A1779B7D20038F32E /* STW3CDateFormatter */ = {
@@ -235,7 +221,7 @@
 			);
 			name = "STW3CDateFormatterTests-mac";
 			productName = STW3CDateFormatterTests;
-			productReference = 2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.octest */;
+			productReference = 2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -422,7 +408,6 @@
 				);
 				INFOPLIST_FILE = STW3CDateFormatterTests/Info.plist;
 				PRODUCT_NAME = STW3CDateFormatterTests;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Debug;
 		};
@@ -436,7 +421,6 @@
 				);
 				INFOPLIST_FILE = STW3CDateFormatterTests/Info.plist;
 				PRODUCT_NAME = STW3CDateFormatterTests;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -489,7 +473,6 @@
 				);
 				INFOPLIST_FILE = STW3CDateFormatterTests/Info.plist;
 				PRODUCT_NAME = STW3CDateFormatterTests;
-				WRAPPER_EXTENSION = octest;
 			};
 			name = Coverage;
 		};

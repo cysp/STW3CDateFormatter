@@ -58,59 +58,99 @@ static inline void STW3CDateFormatterInit(STW3CDateFormatter *self);
 		NSDate * const date = obj;
 
 		NSDateComponents * const components = [_gregorian components:STW3CDateFormatterCalendarUnits fromDate:date];
-		NSMutableString * const string = [NSMutableString stringWithCapacity:25];
+		char buf[25];
+		char *p = buf;
 
 		NSInteger const YYYY = components.year;
 		if (YYYY != NSDateComponentUndefined) {
-			[string appendFormat:@"%04d", (int)MAX(0, YYYY)];
+			NSInteger const v = (int)MAX(0, YYYY);
+			*p++ = '0' + (char)(v / 1000);
+			*p++ = '0' + (v % 1000) / 100;
+			*p++ = '0' + (v % 100) / 10;
+			*p++ = '0' + (v % 10);
 		} else {
-			[string appendString:@"0000"];
+			*p++ = '0';
+			*p++ = '0';
+			*p++ = '0';
+			*p++ = '0';
 		}
+
+		*p++ = '-';
 
 		NSInteger const MM = components.month;
 		if (MM != NSDateComponentUndefined) {
-			[string appendFormat:@"-%02d", (int)MAX(0, MM)];
+			NSInteger const v = (int)MAX(1, MM);
+			*p++ = '0' + (v % 100) / 10;
+			*p++ = '0' + (v % 10);
 		} else {
-			[string appendString:@"-01"];
+			*p++ = '0';
+			*p++ = '1';
 		}
+
+		*p++ = '-';
 
 		NSInteger const DD = components.day;
 		if (DD != NSDateComponentUndefined) {
-			[string appendFormat:@"-%02d", (int)MAX(0, DD)];
+			NSInteger const v = (int)MAX(1, DD);
+			*p++ = '0' + (v % 100) / 10;
+			*p++ = '0' + (v % 10);
 		} else {
-			[string appendString:@"-01"];
+			*p++ = '0';
+			*p++ = '1';
 		}
+
+		*p++ = 'T';
 
 		NSInteger const hh = components.hour;
 		if (hh != NSDateComponentUndefined) {
-			[string appendFormat:@"T%02d", (int)MAX(0, hh)];
+			NSInteger const v = (int)MAX(0, hh);
+			*p++ = '0' + (v % 100) / 10;
+			*p++ = '0' + (v % 10);
 		} else {
-			[string appendString:@"T00"];
+			*p++ = '0';
+			*p++ = '0';
 		}
+
+		*p++ = ':';
 
 		NSInteger const mm = components.minute;
 		if (mm != NSDateComponentUndefined) {
-			[string appendFormat:@":%02d", (int)MAX(0, mm)];
+			NSInteger const v = (int)MAX(0, mm);
+			*p++ = '0' + (v % 100) / 10;
+			*p++ = '0' + (v % 10);
 		} else {
-			[string appendString:@":00"];
+			*p++ = '0';
+			*p++ = '0';
 		}
 
 		NSInteger const ss = components.second;
 		if (ss != NSDateComponentUndefined && ss != 0) {
-			[string appendFormat:@":%02d", (int)MAX(0, ss)];
+			NSInteger const v = (int)MAX(0, ss);
+			*p++ = '0' + (v % 100) / 10;
+			*p++ = '0' + (v % 10);
 		}
 
 		NSTimeZone * const tz = components.timeZone;
-		NSInteger const tzs = [tz secondsFromGMT];
+		NSInteger const tzs = [tz secondsFromGMTForDate:date];
 		if (tzs == 0) {
-			[string appendString:@"Z"];
+			*p++ = 'Z';
 		} else {
-			NSString * const tzsign = (tzs < 0) ? @"-" : @"+";
+			*p++ = (tzs < 0) ? '-' : '+';
 			NSUInteger const tzspos = (NSUInteger)abs((int)tzs);
-			[string appendFormat:@"%@%02d:%02d", tzsign, (int)tzspos / (60 * 60), (int)tzspos % (60 * 60)];
+			{
+				NSInteger const v = (int)tzspos / (60 * 60);
+				*p++ = '0' + (v % 100) / 10;
+				*p++ = '0' + (v % 10);
+			}
+			*p++ = ':';
+			{
+				NSInteger const v = (int)tzspos % (60 * 60);
+				*p++ = '0' + (v % 100) / 10;
+				*p++ = '0' + (v % 10);
+			}
 		}
 
-		return string;
+		return [[NSString alloc] initWithBytes:buf length:(NSUInteger)(p - buf) encoding:NSUTF8StringEncoding];
 	}
 	return nil;
 }

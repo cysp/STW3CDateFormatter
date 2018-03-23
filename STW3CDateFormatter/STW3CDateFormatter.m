@@ -116,6 +116,9 @@ static inline void STW3CDateFormatterInit(STW3CDateFormatter *self);
 }
 
 - (BOOL)getObjectValue:(out __autoreleasing id *)obj forString:(NSString *)string errorDescription:(out NSString *__autoreleasing *)error {
+	return [self getObjectValue:obj forString:string options:0 errorDescription:error];
+}
+- (BOOL)getObjectValue:(out __autoreleasing id *)obj forString:(NSString *)string options:(STW3CDateFormatterOptions)options errorDescription:(out NSString *__autoreleasing *)error {
 	NSArray * const matches = [STW3CDateFormatterRegExp matchesInString:string options:0 range:(NSRange){ .length = [string length] }];
 
 	NSTextCheckingResult * const match = [matches lastObject];
@@ -131,7 +134,7 @@ static inline void STW3CDateFormatterInit(STW3CDateFormatter *self);
 	NSRange const timezoneminuteRange = [match rangeAtIndex:11];
 
 	NSDateComponents * const components = [[NSDateComponents alloc] init];
-	components.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+	components.timeZone = _gregorian.timeZone;
 
 	if (yearRange.location != NSNotFound) {
 		components.year = [[string substringWithRange:yearRange] integerValue];
@@ -151,13 +154,17 @@ static inline void STW3CDateFormatterInit(STW3CDateFormatter *self);
 	if (secondRange.location != NSNotFound) {
 		components.second = [[string substringWithRange:secondRange] integerValue];
 	}
-	if (timezoneRange.location != NSNotFound) {
-		NSString * const timezonestring = [string substringWithRange:timezoneRange];
-		if (![@"Z" isEqualToString:timezonestring]) {
-			NSInteger const timezonesign = [@"-" isEqualToString:[string substringWithRange:timezonesignRange]] ? -1 : 1;
-			NSInteger const timezonehour = [[string substringWithRange:timezonehourRange] integerValue];
-			NSInteger const timezoneminute = [[string substringWithRange:timezoneminuteRange] integerValue];
-			components.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:timezonesign * ((timezonehour * 60 + timezoneminute) * 60)];
+	if ((options & STW3CDateFormatterOptionOverrideTimeZone) == 0) {
+		if (timezoneRange.location != NSNotFound) {
+			NSString * const timezonestring = [string substringWithRange:timezoneRange];
+			if ([@"Z" isEqualToString:timezonestring]) {
+				components.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
+			} else {
+				NSInteger const timezonesign = [@"-" isEqualToString:[string substringWithRange:timezonesignRange]] ? -1 : 1;
+				NSInteger const timezonehour = [[string substringWithRange:timezonehourRange] integerValue];
+				NSInteger const timezoneminute = [[string substringWithRange:timezoneminuteRange] integerValue];
+				components.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:timezonesign * ((timezonehour * 60 + timezoneminute) * 60)];
+			}
 		}
 	}
 
@@ -185,10 +192,13 @@ static inline void STW3CDateFormatterInit(STW3CDateFormatter *self);
 }
 
 - (NSDate *)dateFromString:(NSString *)string {
+	return [self dateFromString:string options:0];
+}
+- (NSDate *)dateFromString:(NSString *)string options:(STW3CDateFormatterOptions)options {
 	id date;
 
 	NSString *errorDescription = nil;
-	if ([self getObjectValue:&date forString:string errorDescription:&errorDescription]) {
+	if ([self getObjectValue:&date forString:string options:options errorDescription:&errorDescription]) {
 		return date;
 	}
 

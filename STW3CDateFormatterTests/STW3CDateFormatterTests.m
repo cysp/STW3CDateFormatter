@@ -20,7 +20,7 @@ static NSUInteger const STW3CDateFormatterTestsCalendarUnits = NSCalendarUnitYea
 - (void)setUp {
     [super setUp];
 
-	_gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	_gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	_gregorian.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
 	_formatter = [[STW3CDateFormatter alloc] init];
 }

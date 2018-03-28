@@ -161,7 +161,7 @@ static inline void STW3CDateFormatterInit(STW3CDateFormatter *self);
 		}
 	}
 
-	NSCalendar * const gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	NSCalendar * const gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	gregorian.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
 
 	NSDate * const date = [gregorian dateFromComponents:components];
@@ -199,6 +199,6 @@ static inline void STW3CDateFormatterInit(STW3CDateFormatter *self);
 
 
 static inline void STW3CDateFormatterInit(STW3CDateFormatter *self) {
-	self->_gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+	self->_gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
 	self->_gregorian.timeZone = [NSTimeZone timeZoneForSecondsFromGMT:0];
 }

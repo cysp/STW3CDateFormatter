@@ -3,14 +3,20 @@ language: objective-c
 xcode_project: STW3CDateFormatter.xcodeproj
 matrix:
     include:
-        - xcode_sdk: iphonesimulator7.1
+        - xcode_sdk: iphonesimulator
           xcode_scheme: STW3CDateFormatter-iOS
+          env:
+              - TRAVIS_XCODE_DESTINATION="platform=iOS Simulator,name=iPhone 7"
         - xcode_sdk: macosx
           xcode_scheme: STW3CDateFormatter-mac
+          env:
+              - TRAVIS_XCODE_DESTINATION="platform=OS X"
 
 branches:
   only:
     - master
 
 before_script:
-    - brew update && brew upgrade xctool
+    - gem install xcpretty
+
+script: set -o pipefail && xcodebuild test -project "${TRAVIS_XCODE_PROJECT}" -scheme "${TRAVIS_XCODE_SCHEME}" -sdk "${TRAVIS_XCODE_SDK}" -destination "${TRAVIS_XCODE_DESTINATION}" | xcpretty

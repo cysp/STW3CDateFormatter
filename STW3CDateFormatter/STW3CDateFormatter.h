@@ -5,9 +5,9 @@
 
 @interface STW3CDateFormatter : NSFormatter
 
-@property (nonatomic,strong) NSTimeZone *timeZone;
+@property (nonatomic,strong,nullable) NSTimeZone *timeZone;
 
-- (NSString *)stringFromDate:(NSDate *)date;
-- (NSDate *)dateFromString:(NSString *)string;
+- (NSString * __nonnull)stringFromDate:(NSDate * __nonnull)date;
+- (NSDate * __nullable)dateFromString:(NSString * __nonnull)string;
 
 @end

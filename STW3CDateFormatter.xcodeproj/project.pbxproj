@@ -232,7 +232,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastTestingUpgradeCheck = 0610;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Scott Talbot";
 			};
 			buildConfigurationList = 2C8F1A901779B7D20038F32E /* Build configuration list for PBXProject "STW3CDateFormatter" */;

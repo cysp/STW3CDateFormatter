@@ -154,6 +154,10 @@ static NSUInteger const STW3CDateFormatterTestsCalendarUnits = NSCalendarUnitYea
 	}
 }
 
+- (void)testParsingFailure {
+	XCTAssertNil([_formatter dateFromString:@""]);
+}
+
 - (void)testStringing {
 	{
 		NSDate * const input = [NSDate dateWithTimeIntervalSince1970:0];

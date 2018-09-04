@@ -14,6 +14,11 @@
 		2C8F1ADE1779D1DE0038F32E /* libSTW3CDateFormatter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F1AC81779D1DD0038F32E /* libSTW3CDateFormatter.a */; };
 		2C8F1AF51779D6780038F32E /* STW3CDateFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F1AB41779B7D20038F32E /* STW3CDateFormatterTests.m */; };
 		2C8F1AF61779D6800038F32E /* STW3CDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F1A9F1779B7D20038F32E /* STW3CDateFormatter.m */; };
+		3D4390FB213E5B8900690781 /* STW3CDateFormatter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3D4390F2213E5B8800690781 /* STW3CDateFormatter.framework */; };
+		3D43910B213E5C8900690781 /* STW3CDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8F1A9D1779B7D20038F32E /* STW3CDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3D43910C213E5C8900690781 /* STW3CDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F1A9F1779B7D20038F32E /* STW3CDateFormatter.m */; };
+		3D43910D213E5CF000690781 /* STW3CDateFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F1AB41779B7D20038F32E /* STW3CDateFormatterTests.m */; };
+		3DE8F34A212E85E6008F917D /* STW3CDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8F1A9D1779B7D20038F32E /* STW3CDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,6 +35,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 2C8F1AC71779D1DD0038F32E;
 			remoteInfo = STW3CDateFormatter;
+		};
+		3D4390FC213E5B8900690781 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2C8F1A8D1779B7D20038F32E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 3D4390F1213E5B8800690781;
+			remoteInfo = "STW3CDateFormatter-iOS-Framework";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -61,6 +73,9 @@
 		2C8F1AC31779D1490038F32E /* STW3CDateFormatter.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = STW3CDateFormatter.xcconfig; sourceTree = "<group>"; };
 		2C8F1AC81779D1DD0038F32E /* libSTW3CDateFormatter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSTW3CDateFormatter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STW3CDateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4390F2213E5B8800690781 /* STW3CDateFormatter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = STW3CDateFormatter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3D4390F5213E5B8900690781 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3D4390FA213E5B8900690781 /* STW3CDateFormatterFrameworkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STW3CDateFormatterFrameworkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +109,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3D4390EE213E5B8800690781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4390F7213E5B8900690781 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D4390FB213E5B8900690781 /* STW3CDateFormatter.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -114,6 +144,8 @@
 				2C8F1AA51779B7D20038F32E /* STW3CDateFormatterTests.xctest */,
 				2C8F1AC81779D1DD0038F32E /* libSTW3CDateFormatter.a */,
 				2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.xctest */,
+				3D4390F2213E5B8800690781 /* STW3CDateFormatter.framework */,
+				3D4390FA213E5B8900690781 /* STW3CDateFormatterFrameworkTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -127,6 +159,7 @@
 				2C8F1AC21779D1490038F32E /* STW3CDateFormatter-Release.xcconfig */,
 				2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */,
 				2C8F1AC11779D1490038F32E /* STW3CDateFormatter-mac.xcconfig */,
+				3D4390F5213E5B8900690781 /* Info.plist */,
 				2C8F1A9D1779B7D20038F32E /* STW3CDateFormatter.h */,
 				2C8F1A9F1779B7D20038F32E /* STW3CDateFormatter.m */,
 			);
@@ -149,6 +182,15 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DE8F34A212E85E6008F917D /* STW3CDateFormatter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4390EF213E5B8800690781 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D43910B213E5C8900690781 /* STW3CDateFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +267,42 @@
 			productReference = 2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		3D4390F1213E5B8800690781 /* STW3CDateFormatterFramework-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D439109213E5B8900690781 /* Build configuration list for PBXNativeTarget "STW3CDateFormatterFramework-iOS" */;
+			buildPhases = (
+				3D4390ED213E5B8800690781 /* Sources */,
+				3D4390EE213E5B8800690781 /* Frameworks */,
+				3D4390EF213E5B8800690781 /* Headers */,
+				3D4390F0213E5B8800690781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "STW3CDateFormatterFramework-iOS";
+			productName = "STW3CDateFormatter-iOS-Framework";
+			productReference = 3D4390F2213E5B8800690781 /* STW3CDateFormatter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		3D4390F9213E5B8900690781 /* STW3CDateFormatterFrameworkTests-iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3D43910A213E5B8900690781 /* Build configuration list for PBXNativeTarget "STW3CDateFormatterFrameworkTests-iOS" */;
+			buildPhases = (
+				3D4390F6213E5B8900690781 /* Sources */,
+				3D4390F7213E5B8900690781 /* Frameworks */,
+				3D4390F8213E5B8900690781 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				3D4390FD213E5B8900690781 /* PBXTargetDependency */,
+			);
+			name = "STW3CDateFormatterFrameworkTests-iOS";
+			productName = "STW3CDateFormatter-iOS-FrameworkTests";
+			productReference = 3D4390FA213E5B8900690781 /* STW3CDateFormatterFrameworkTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -234,6 +312,16 @@
 				LastTestingUpgradeCheck = 0610;
 				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = "Scott Talbot";
+				TargetAttributes = {
+					3D4390F1213E5B8800690781 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+					3D4390F9213E5B8900690781 = {
+						CreatedOnToolsVersion = 9.4.1;
+						ProvisioningStyle = Automatic;
+					};
+				};
 			};
 			buildConfigurationList = 2C8F1A901779B7D20038F32E /* Build configuration list for PBXProject "STW3CDateFormatter" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -249,6 +337,8 @@
 			targets = (
 				2C8F1A941779B7D20038F32E /* STW3CDateFormatter-iOS */,
 				2C8F1AA41779B7D20038F32E /* STW3CDateFormatterTests-iOS */,
+				3D4390F1213E5B8800690781 /* STW3CDateFormatterFramework-iOS */,
+				3D4390F9213E5B8900690781 /* STW3CDateFormatterFrameworkTests-iOS */,
 				2C8F1AC71779D1DD0038F32E /* STW3CDateFormatter-mac */,
 				2C8F1AD81779D1DE0038F32E /* STW3CDateFormatterTests-mac */,
 			);
@@ -264,6 +354,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		2C8F1AD71779D1DE0038F32E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4390F0213E5B8800690781 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4390F8213E5B8900690781 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -305,6 +409,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3D4390ED213E5B8800690781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D43910C213E5C8900690781 /* STW3CDateFormatter.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3D4390F6213E5B8900690781 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3D43910D213E5CF000690781 /* STW3CDateFormatterTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -317,6 +437,11 @@
 			isa = PBXTargetDependency;
 			target = 2C8F1AC71779D1DD0038F32E /* STW3CDateFormatter-mac */;
 			targetProxy = 2C8F1ADC1779D1DE0038F32E /* PBXContainerItemProxy */;
+		};
+		3D4390FD213E5B8900690781 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 3D4390F1213E5B8800690781 /* STW3CDateFormatterFramework-iOS */;
+			targetProxy = 3D4390FC213E5B8900690781 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -477,6 +602,115 @@
 			};
 			name = Coverage;
 		};
+		3D439103213E5B8900690781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_OPTIMIZATION_LEVEL = 0;
+				INFOPLIST_FILE = STW3CDateFormatter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		3D439104213E5B8900690781 /* Coverage */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = STW3CDateFormatter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Coverage;
+		};
+		3D439105213E5B8900690781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = STW3CDateFormatter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		3D439106213E5B8900690781 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = STW3CDateFormatterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = STW3CDateFormatterFrameworkTests;
+			};
+			name = Debug;
+		};
+		3D439107213E5B8900690781 /* Coverage */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = STW3CDateFormatterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = STW3CDateFormatterFrameworkTests;
+			};
+			name = Coverage;
+		};
+		3D439108213E5B8900690781 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				INFOPLIST_FILE = STW3CDateFormatterTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = STW3CDateFormatterFrameworkTests;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -526,6 +760,26 @@
 				2C8F1AEB1779D1DE0038F32E /* Debug */,
 				2C8F1AF11779D2310038F32E /* Coverage */,
 				2C8F1AEC1779D1DE0038F32E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D439109213E5B8900690781 /* Build configuration list for PBXNativeTarget "STW3CDateFormatterFramework-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D439103213E5B8900690781 /* Debug */,
+				3D439104213E5B8900690781 /* Coverage */,
+				3D439105213E5B8900690781 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3D43910A213E5B8900690781 /* Build configuration list for PBXNativeTarget "STW3CDateFormatterFrameworkTests-iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3D439106213E5B8900690781 /* Debug */,
+				3D439107213E5B8900690781 /* Coverage */,
+				3D439108213E5B8900690781 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

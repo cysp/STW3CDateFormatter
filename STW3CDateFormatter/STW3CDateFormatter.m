@@ -1,6 +1,6 @@
 //  Copyright (c) 2013 Scott Talbot. All rights reserved.
 
-#import "STW3CDateFormatter.h"
+#import <STW3CDateFormatter/STW3CDateFormatter.h>
 
 //#define NS_ENABLE_CALENDAR_NEW_API 1
 

@@ -14,8 +14,6 @@
 		2C8F1ADE1779D1DE0038F32E /* libSTW3CDateFormatter.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C8F1AC81779D1DD0038F32E /* libSTW3CDateFormatter.a */; };
 		2C8F1AF51779D6780038F32E /* STW3CDateFormatterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F1AB41779B7D20038F32E /* STW3CDateFormatterTests.m */; };
 		2C8F1AF61779D6800038F32E /* STW3CDateFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C8F1A9F1779B7D20038F32E /* STW3CDateFormatter.m */; };
-		3DE8F349212E85D4008F917D /* module.modulemap in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3DE8F348212E85D0008F917D /* module.modulemap */; };
-		3DE8F34A212E85E6008F917D /* STW3CDateFormatter.h in Headers */ = {isa = PBXBuildFile; fileRef = 2C8F1A9D1779B7D20038F32E /* STW3CDateFormatter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +40,6 @@
 			dstPath = "include/$(PRODUCT_NAME)";
 			dstSubfolderSpec = 16;
 			files = (
-				3DE8F349212E85D4008F917D /* module.modulemap in CopyFiles */,
 				2C8F1A9E1779B7D20038F32E /* STW3CDateFormatter.h in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -64,7 +61,6 @@
 		2C8F1AC31779D1490038F32E /* STW3CDateFormatter.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = STW3CDateFormatter.xcconfig; sourceTree = "<group>"; };
 		2C8F1AC81779D1DD0038F32E /* libSTW3CDateFormatter.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libSTW3CDateFormatter.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C8F1AD91779D1DE0038F32E /* STW3CDateFormatterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = STW3CDateFormatterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DE8F348212E85D0008F917D /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,7 +127,6 @@
 				2C8F1AC21779D1490038F32E /* STW3CDateFormatter-Release.xcconfig */,
 				2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */,
 				2C8F1AC11779D1490038F32E /* STW3CDateFormatter-mac.xcconfig */,
-				3DE8F348212E85D0008F917D /* module.modulemap */,
 				2C8F1A9D1779B7D20038F32E /* STW3CDateFormatter.h */,
 				2C8F1A9F1779B7D20038F32E /* STW3CDateFormatter.m */,
 			);
@@ -154,7 +149,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DE8F34A212E85E6008F917D /* STW3CDateFormatter.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,7 +339,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/STW3CDateFormatter.dst;
 			};
 			name = Debug;
@@ -354,7 +347,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/STW3CDateFormatter.dst;
 			};
 			name = Release;
@@ -444,7 +436,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 2C8F1AC01779D1490038F32E /* STW3CDateFormatter-iOS.xcconfig */;
 			buildSettings = {
-				DEFINES_MODULE = YES;
 				DSTROOT = /tmp/STW3CDateFormatter.dst;
 			};
 			name = Coverage;
